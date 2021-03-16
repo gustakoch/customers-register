@@ -1,0 +1,45 @@
+section#home table {
+    box-shadow: 0 0px 50px rgb(0,0,0, 0.1);
+    border-radius: 5px;
+
+    margin-top: 1rem;
+    border-spacing: 0;
+
+    width: 100%;
+}
+
+section#home table thead th {
+    border-bottom: 1px solid #ddd;
+
+    height: 4rem;
+    text-align: left;
+    font-size: 1.20rem;
+}
+
+section#home table thead th:first-child {
+    text-align: center;
+    width: 5rem;
+}
+
+section#home table tbody td:first-child {
+    text-align: center;
+}
+
+section#home table tbody td:nth-child(2) {
+    display: flex;
+    align-items: center;
+
+    padding: 1rem 0;
+}
+
+section#home table tbody td:nth-child(2) img {
+    margin-right: 1rem;
+}
+
+section#home table td img {
+    height: 5rem;
+    width: 5rem;
+
+    border-radius: 50%;
+    object-fit: cover;
+}

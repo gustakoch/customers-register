@@ -1,0 +1,47 @@
+section#create form {
+    width: 100%;
+}
+
+div.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+div.input-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+div.input-group input:not([type="file"]) {
+    height: 3rem;
+    border-radius: 5px;
+    border: 1px solid var(--gray-line);
+
+    padding: 0.5rem 1rem;
+}
+
+div.input-group input::placeholder {
+    color: var(--gray-medium);
+}
+
+div.input-group + div.input-group {
+    margin-top: 1.5rem;
+}
+
+div.button-group {
+    display: flex;
+    justify-content: flex-end;
+
+    margin-top: 1.5rem;
+}
+
+div.button-group a:first-child {
+    margin-right: 1rem;
+}
+
+span.alert {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: var(--red);
+    margin-bottom: 1rem;
+}

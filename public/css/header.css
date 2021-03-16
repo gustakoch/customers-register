@@ -1,0 +1,14 @@
+body > header {
+    background: #333;
+
+    height: 9rem;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body > header img {
+    height: 80px;
+}
