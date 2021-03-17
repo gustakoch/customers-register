@@ -2,7 +2,7 @@ section#home table {
     box-shadow: 0 0px 50px rgb(0,0,0, 0.1);
     border-radius: 5px;
 
-    margin-top: 1rem;
+    margin: 1rem 0 3rem 0;
     border-spacing: 0;
 
     width: 100%;
@@ -36,10 +36,26 @@ section#home table tbody td:nth-child(2) img {
     margin-right: 1rem;
 }
 
+section#home table tbody td.action {
+    width: 3rem;
+}
+
 section#home table td img {
     height: 5rem;
     width: 5rem;
 
     border-radius: 50%;
     object-fit: cover;
+}
+
+svg.icon {
+    height: 1.5rem;
+}
+
+svg.icon.edit {
+    fill: var(--yellow);
+}
+
+svg.icon.delete {
+    fill: var(--red);
 }

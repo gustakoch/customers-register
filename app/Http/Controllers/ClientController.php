@@ -35,15 +35,45 @@ class ClientController extends Controller
         return redirect()->route('client.index');
     }
 
-    public function show() {
+    public function show($id) {
+        $client = Client::find($id);
+
+        if (!$client) {
+            return redirect()->route('client.index');
+        }
+
+        return view('edit', ['client' => $client]);
     }
 
-    public function edit() {
+    public function edit($id) {
+        $data = request()->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'email', 'max:100'],
+            'phone' => ['required', 'max:50'],
+            'photo' => ''
+        ]);
+
+        if (request('photo')) {
+            $imagePath = request('photo')->store('uploads', 'public');
+
+            Client::whereId($id)->update(array_merge(
+                $data,
+                ['photo' => $imagePath]
+            ));
+
+            return redirect()->route('client.index');
+        }
+
+        Client::whereId($id)->update($data);
+
+        return redirect()->route('client.index');
     }
 
-    public function update() {
-    }
+    public function destroy($id) {
+        $client = Client::find($id);
 
-    public function destroy() {
+        $client->delete();
+
+        return redirect()->route('client.index');
     }
 }

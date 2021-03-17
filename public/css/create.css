@@ -12,6 +12,10 @@ div.input-group label {
     font-weight: 500;
 }
 
+div.input-group input {
+    outline: var(--gray-line);
+}
+
 div.input-group input:not([type="file"]) {
     height: 3rem;
     border-radius: 5px;
